@@ -1,0 +1,107 @@
+
+body {
+    background: url("../jqueryui/css/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png") repeat scroll 50% top #F2F5F7 ;
+}
+
+#container {
+/*    background: url("../jqueryui/css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png") repeat scroll 50% top #F2F5F7 ; */
+    background: #F2F5F7 ;
+    background-color: #F2F5F7;
+    text-align: center; 
+    position: relative;
+    vertical-align: middle; 
+    height: 625px;
+    width: 750px;
+    margin-left: -375px;
+    left: 50%;
+    padding: 10px;
+    border: 4px solid #aaaaaa;
+}
+
+
+#header {
+    background: url("../jqueryui/css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png") repeat scroll 50% top #F2F5F7 ;
+    margin-bottom: 10px;
+}
+#headerText  {
+    font-size: 60;
+}
+#subheaderText {
+    font-size: 20;
+}
+#mode > .ui-button {
+    margin-right: -0.4em;
+    font-size: 10;
+
+}
+
+#options {
+    margin-top: 20px;
+}
+
+#options > * > .ui-button {
+    font-size: 12;
+    margin-top: 2px;
+}
+
+#results, #intervalInfo {
+    color: #0070A3;
+    font-size: 18;
+}
+
+#intervalInfo {
+    margin-top: 20px;
+}
+
+#playAndStatus {
+    height: 220px;
+}
+
+#playButton {
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    background: #D7EBF9;
+    font-size: 30;
+}
+
+#showAnswer {
+    margin-left: 10px;
+}
+.bordered-container {
+/*    border: 2px solid #aaaaaa; */
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+.divLabel {
+    color: #2779AA;
+    text-align: left;
+    margin-top: 10px;
+}
+
+#footer {position: relative;
+	margin-top: -20px; /* negative value of footer height */
+    text-align: center; 
+    position: relative;
+    vertical-align: middle; 
+    color: #999;
+    font-size: 8;
+	height: 20px;
+	clear:both;} 
+
+/*
+#footer {
+    position: absolute;
+    vertical-align: middle; 
+    text-align: center; 
+    left: 40%;
+    bottom: 7px;
+    color: #999;
+    font-size: 8;
+}
+*/
+#footer a {
+    color: #999;
+}

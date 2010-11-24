@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta name="google-site-verification" content="zxi8thg93qCj365yivfEnqAaFXcyHQN6lucvF6W0RYw" />
+<title>Minor Seventh: Free Ear Training</title>
+
+<link type="text/css" href="jqueryui/css/cupertino/jquery-ui-1.8.1.custom.css" rel="stylesheet" />	
+<link type="text/css" href="css/style.css" rel="stylesheet" />	
+
+<script type="text/javascript" src="jqueryui/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.1.custom.min.js"></script>
+<script type="text/javascript" src="soundmanager/soundmanager2.js"></script>
+
+<script type="text/javascript" src="js/minorseventh.js"></script>
+
+</head>
+<body>
+<div id="container" class="ui-corner-all">
+    <div class="ui-widget ui-widget-header" id="header">
+	<div id="headerText">Minor Seventh</div>
+	<div id="subheaderText">Free Ear Training</div>
+    </div>
+	<div id="mode" >
+	    <input type="radio" disabled="disabled" name="modeSelect" id="intervalQuiz" checked="checked" value="0" onclick="setMode('intervalQuiz');"/><label for="intervalQuiz">Interval Quiz</label>
+	    <input type="radio" disabled="disabled" name="modeSelect"  value="1" id="intervalTrainer" onclick="setMode('intervalTrainer');"/><label for="intervalTrainer">Interval Training</label>
+	</div>
+
+    <div id="playAndStatus">
+	<div id="play" >
+	    <button onclick="playInterval(this, null,false);" disabled="disabled" id="playButton">Play</button>
+	</div>
+
+	<div id="results" class="ui-widget">Click 'Play' to begin training.<br/>0 correct out of 0 guesses.</div>
+	<div id="intervalInfo" class="ui-widget"></div>
+    </div>
+    <br/>
+
+    <div id="answersContainer" class="bordered-container ui-corner-all">
+	<div id="answers" > </div> 
+	<div id="trainer" > </div> 
+
+    </div>
+	<div id="options" >
+	    <div id="arpeggiate" >
+		<input type="radio" disabled="disabled" name="optionArpeggio" checked="checked" id="arpeggioOn" value="0" onclick="noArpeggios = false"/><label for="arpeggioOn">Play Arpeggios</label>
+
+		<input type="radio" disabled="disabled" name="optionArpeggio" id="arpeggioOff" value="1" onclick="noArpeggios = true"/><label for="arpeggioOff">Don't Play Arpeggios</label>
+
+	    </div>
+	    <div id="direction" >
+		<input type="radio" disabled="disabled" name="optionDirection" checked="checked" value="0" id="directionUp" onclick=" lowToHigh = true"/><label for="directionUp">Ascending Intervals </label>
+		<input type="radio" disabled="disabled" name="optionDirection" id="directionDown" value="1" onclick=" lowToHigh = false"/><label for="directionDown">Descending Intervals</label>
+	    </div>
+	</div>
+
+    <br/>
+
+
+
+</div>
+    <div id="footer" class="ui-widget"> 
+	Copyright 2010 Adam Fletcher | <a href="mailto:feedback@minorseventh.com">Submit Feedback</a>
+    </div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16270890-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+
