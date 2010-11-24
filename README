@@ -1,0 +1,15 @@
+MinorSeventh is an ear training web application written in flash, HTML and JavaScript. 
+The application currently focuses on interval recognition.
+
+I've created the musical notes used and you're free to use them in your application. 
+The webapp itself is licensed under the BSD License, with the exception of 
+SoundManager 2 and JQuery/JQueryUI, which have there own license that can be found at:
+
+http://www.schillmania.com/projects/soundmanager2/license.txt (the BSD license)
+
+And:
+
+http://jquery.org/license (the MIT license)
+
+A copy of the BSD license can be found in license.txt in the MinorSeventh
+repository.
