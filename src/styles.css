@@ -165,17 +165,6 @@
   opacity: 0;
 }
 
-/* Custom scale utilities */
-@layer utilities {
-  .scale-102 {
-    transform: scale(1.02);
-  }
-
-  .scale-98 {
-    transform: scale(0.98);
-  }
-}
-
 /* Responsive text sizing */
 @media (max-width: 640px) {
   .play-button span {
