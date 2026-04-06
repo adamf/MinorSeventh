@@ -1,11 +1,11 @@
 # GitHub Pages deployment workflow for MinorSeventh
-# Builds the Vite app and deploys to GitHub Pages on push to main
+# Builds the Vite app and deploys to GitHub Pages on push to master
 
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['main']
+    branches: ['master']
   workflow_dispatch:
 
 permissions:
