@@ -76,4 +76,5 @@ export const INTERVALS = [
   }
 ];
 
-export const MIDDLE_C_INDEX = 12; // Index of C3 in NOTES array
+// Calculate MIDDLE_C_INDEX dynamically based on NOTES array
+export const MIDDLE_C_INDEX = NOTES.indexOf('C3');
