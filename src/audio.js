@@ -34,14 +34,14 @@ class AudioManager {
       // Load individual note samples
       for (const note of notes) {
         const filename = note.replace(/#/g, 'sharp');
-        loadPromises.push(this.loadSample(note, `/samples/${filename}.mp3`));
+        loadPromises.push(this.loadSample(note, `samples/${filename}.mp3`));
       }
       
       // Load interval samples (C3 combined with other notes)
       for (const note of notes) {
         const filename = note.replace(/#/g, 'sharp');
         const sampleId = `C3-${note}`;
-        loadPromises.push(this.loadSample(sampleId, `/samples/C3-${filename}.mp3`));
+        loadPromises.push(this.loadSample(sampleId, `samples/C3-${filename}.mp3`));
       }
       
       await Promise.all(loadPromises);
