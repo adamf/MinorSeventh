@@ -4,62 +4,139 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* Custom Styles */
-.mode-btn {
-  @apply text-white/60;
-}
+/* Custom Component Styles - using @layer components for TailwindCSS v4 */
+@layer components {
+  .mode-btn {
+    color: rgb(255 255 255 / 0.6);
+  }
 
-.mode-btn:hover {
-  @apply text-white/80;
-}
+  .mode-btn:hover {
+    color: rgb(255 255 255 / 0.8);
+  }
 
-.mode-btn.active {
-  @apply bg-white/20 text-white shadow-lg;
-}
+  .mode-btn.active {
+    background-color: rgb(255 255 255 / 0.2);
+    color: rgb(255 255 255);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
 
-.toggle-btn {
-  @apply text-white/60;
-}
+  .toggle-btn {
+    color: rgb(255 255 255 / 0.6);
+  }
 
-.toggle-btn:hover {
-  @apply text-white/80;
-}
+  .toggle-btn:hover {
+    color: rgb(255 255 255 / 0.8);
+  }
 
-.toggle-btn.active {
-  @apply bg-blue-500 text-white shadow-md;
-}
+  .toggle-btn.active {
+    background-color: #3b82f6;
+    color: rgb(255 255 255);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
 
-.answer-btn {
-  @apply px-4 py-4 rounded-xl font-semibold text-sm
-         bg-white/10 hover:bg-white/20 
-         border border-white/20 hover:border-white/30
-         text-white/90 hover:text-white
-         transform hover:scale-102 active:scale-98
-         transition-all duration-150
-         disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
-}
+  .answer-btn {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background-color: rgb(255 255 255 / 0.1);
+    border: 1px solid rgb(255 255 255 / 0.2);
+    color: rgb(255 255 255 / 0.9);
+    transition: all 0.15s;
+  }
 
-.answer-btn.correct {
-  @apply bg-green-500/30 border-green-400/50 text-green-200 animate-pulse;
-}
+  .answer-btn:hover {
+    background-color: rgb(255 255 255 / 0.2);
+    border-color: rgb(255 255 255 / 0.3);
+    color: rgb(255 255 255);
+    transform: scale(1.02);
+  }
 
-.answer-btn.incorrect {
-  @apply bg-red-500/30 border-red-400/50 text-red-200;
-}
+  .answer-btn:active {
+    transform: scale(0.98);
+  }
 
-.trainer-btn {
-  @apply px-4 py-4 rounded-xl font-semibold text-sm
-         bg-gradient-to-br from-purple-500/20 to-blue-500/20
-         hover:from-purple-500/30 hover:to-blue-500/30
-         border border-purple-400/30 hover:border-purple-400/50
-         text-white/90 hover:text-white
-         transform hover:scale-102 active:scale-98
-         transition-all duration-150
-         disabled:opacity-50 disabled:cursor-not-allowed;
-}
+  .answer-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
-.trainer-btn.playing {
-  @apply from-purple-500/40 to-blue-500/40 border-purple-400/70 scale-105;
+  .answer-btn:disabled:hover {
+    transform: scale(1);
+  }
+
+  .answer-btn.correct {
+    background-color: rgb(34 197 94 / 0.3);
+    border-color: rgb(74 222 128 / 0.5);
+    color: rgb(187 247 208);
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .answer-btn.incorrect {
+    background-color: rgb(239 68 68 / 0.3);
+    border-color: rgb(248 113 113 / 0.5);
+    color: rgb(254 202 202);
+  }
+
+  .trainer-btn {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background: linear-gradient(to bottom right, rgb(168 85 247 / 0.2), rgb(59 130 246 / 0.2));
+    border: 1px solid rgb(192 132 252 / 0.3);
+    color: rgb(255 255 255 / 0.9);
+    transition: all 0.15s;
+  }
+
+  .trainer-btn:hover {
+    background: linear-gradient(to bottom right, rgb(168 85 247 / 0.3), rgb(59 130 246 / 0.3));
+    border-color: rgb(192 132 252 / 0.5);
+    color: rgb(255 255 255);
+    transform: scale(1.02);
+  }
+
+  .trainer-btn:active {
+    transform: scale(0.98);
+  }
+
+  .trainer-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .trainer-btn.playing {
+    background: linear-gradient(to bottom right, rgb(168 85 247 / 0.4), rgb(59 130 246 / 0.4));
+    border-color: rgb(192 132 252 / 0.7);
+    transform: scale(1.05);
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background-color: rgb(255 255 255 / 0.9);
+    color: rgb(17 24 39);
+    font-weight: 500;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  #app.loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 /* Play Button Pulse Animation */
@@ -88,37 +165,10 @@
   opacity: 0;
 }
 
-/* Scale utilities */
-.hover\:scale-102:hover {
-  transform: scale(1.02);
-}
-
-.active\:scale-98:active {
-  transform: scale(0.98);
-}
-
-/* Loading state */
-#app.loading {
-  @apply opacity-50 pointer-events-none;
-}
-
-/* Toast notification */
-.toast {
-  @apply fixed bottom-4 left-1/2 -translate-x-1/2
-         px-6 py-3 rounded-full
-         bg-white/90 text-gray-900 font-medium
-         shadow-xl
-         transform translate-y-full opacity-0
-         transition-all duration-300;
-}
-
-.toast.show {
-  @apply translate-y-0 opacity-100;
-}
-
 /* Responsive text sizing */
 @media (max-width: 640px) {
   .play-button span {
-    @apply text-3xl;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
